@@ -55,16 +55,19 @@ public class MainActivity extends Activity {
 
         // 上方狀態設定條消失
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+//        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
 
         SurfaceView surfViewDraw = (SurfaceView) findViewById(R.id.surfVDraw);
         surfViewDraw.setZOrderOnTop(true);
-        surfViewDraw.getHolder().setFormat(PixelFormat.TRANSLUCENT);
-
+        surfViewDraw.setBackgroundColor(0Xffffffff);
 
         surHolder = surfViewDraw.getHolder();
+        surHolder.setFormat(PixelFormat.TRANSLUCENT);
+
+
+
 
 
         // initial local layout object
